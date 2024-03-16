@@ -15,14 +15,13 @@ import React from 'react'
 // }
 
 // 전개해서 props를 받으면 가독성이 높아짐
-const TabBtn = ({num, setNum, index, btn}) => {
+const TabBtn = ({id, num, setNum, btn}) => {
     return (
       <li 
-      onClick={() => {
-          setNum(index + 1)
-      }} 
-      className={
-          num === index + 1 ? "active" : ""}
+        onClick={() => {
+          setNum(id);
+        }} 
+        className={num === id ? "active" : ""}
       >
           {btn}
       </li>
